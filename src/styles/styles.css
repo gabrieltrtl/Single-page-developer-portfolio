@@ -47,6 +47,7 @@ body {
 @media (min-width: 700px) {
   .intro__wrapper {
     grid-template-columns: 1fr 31px 1fr;
+    grid-template-rows: 1fr;
   }
 }
 
@@ -62,6 +63,7 @@ body {
 }
 @media (min-width: 700px) {
   .header {
+    align-items: center;
     flex-direction: row;
     max-width: 708.5px;
     grid-column: 1/-1;
@@ -83,7 +85,8 @@ body {
 }
 @media (min-width: 700px) {
   .header__icons {
-    width: unset;
+    width: initial;
+    gap: 32px;
   }
 }
 
@@ -97,4 +100,25 @@ body {
     grid-column: 2/-1;
     z-index: -1;
   }
+}
+
+@media (min-width: 700px) {
+  .intro {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    align-self: end;
+  }
+}
+
+@media (min-width: 700px) {
+  .intro__title {
+    font-size: 72px;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+    letter-spacing: -2.05px;
+  }
+}
+
+.intro__text {
+  font-size: 18px;
 }/*# sourceMappingURL=styles.css.map */

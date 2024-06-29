@@ -51,6 +51,7 @@ body {
   grid-auto-columns: 1fr;
   @include device(tablet) {
     grid-template-columns: 1fr 31px 1fr;
+    grid-template-rows: 1fr;
   }
 }
 
@@ -64,6 +65,7 @@ body {
   max-width: 154px;
   margin: 20px auto 0 auto;
   @include device(tablet) {
+    align-items: center;
     flex-direction: row;
     max-width: 708.5px;
     grid-column: 1 / -1;
@@ -83,7 +85,8 @@ body {
   justify-content: space-between;
   width: 100%;
   @include device(tablet) {
-    width: unset;
+    width: initial;
+    gap: 32px
   }
 }
 
@@ -95,4 +98,25 @@ body {
     grid-column: 2 / -1;
     z-index: -1;
   }
+}
+
+.intro {
+  @include device(tablet) {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    align-self: end;
+  }
+}
+
+.intro__title {
+  @include device(tablet) {
+    font-size: 72px;
+    color: $neutral-color-2;
+    margin-bottom: 60px;
+    letter-spacing: -2.05px;
+  }
+}
+
+.intro__text {
+  font-size: 18px;
 }
