@@ -91,4 +91,10 @@ body {
   grid-column: 1;
   grid-row: 1/-1;
   margin: 0 auto;
+}
+@media (min-width: 700px) {
+  .intro__picture {
+    grid-column: 2/-1;
+    z-index: -1;
+  }
 }/*# sourceMappingURL=styles.css.map */

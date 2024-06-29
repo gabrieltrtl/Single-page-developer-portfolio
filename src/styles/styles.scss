@@ -91,4 +91,8 @@ body {
   grid-column: 1;
   grid-row: 1 / -1;
   margin: 0 auto;
+  @include device(tablet) {
+    grid-column: 2 / -1;
+    z-index: -1;
+  }
 }
