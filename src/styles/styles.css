@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url(../../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, fieldset {
+  border: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #151515;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 154px;
+  margin: 0 auto;
+}
+
+.header__icons {
+  display: flex;
+  justify-content: space-around;
+}/*# sourceMappingURL=styles.css.map */

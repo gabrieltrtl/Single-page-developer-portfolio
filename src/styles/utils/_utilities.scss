@@ -1,0 +1,32 @@
+// Media Query
+
+@mixin device($device) {
+  @if $device == tablet {
+    @media (min-width: 700px) {
+      @content;
+    }
+  }  
+  @else if $device == desktop {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  }
+}
+
+// Colors
+$neutral-color-1: #151515;
+$neutral-color-2: #FFFFFF;
+$color1: #4EE1A0;
+$color2: #D9D9D9;
+$color3: #242424;
+$color4: #FF6F5B;
+
+
+
+//Typography
+$fonts: (
+  "$xsmall": 14px,
+  "$small": 18px,
+  "$medium": 24px,
+  "$large": 56px,
+);
