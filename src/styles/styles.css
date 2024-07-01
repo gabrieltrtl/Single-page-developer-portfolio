@@ -99,6 +99,7 @@ body {
   .intro__picture {
     grid-column: 2/-1;
     z-index: -1;
+    max-width: 322px;
   }
 }
 
