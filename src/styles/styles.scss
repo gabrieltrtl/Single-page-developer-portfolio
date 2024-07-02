@@ -44,6 +44,15 @@ body {
   font-family: "Space Grotesk", sans-serif;
   background-color: $neutral-color-1;
   color: $neutral-color-2;
+  background-image: url(../../assets/images/pattern-rings.svg);
+  background-repeat: no-repeat;
+  background-position: top 124px left -342px;
+  @include device(tablet) {
+    background-position: top 86px left -265px; 
+  }
+  @include device(desktop) {
+    background-position: top 113px left -100px; 
+  }
 }
 
 .intro__wrapper {
@@ -51,16 +60,20 @@ body {
   grid-template-rows: auto;
   grid-auto-columns: 1fr;
   margin-bottom: 92px;
+  background: url(../../assets/images/pattern-circle.svg) no-repeat top 254px right -65px;
   @include device(tablet) {
     grid-template-columns: 1fr 31px 1fr;
     grid-template-rows: 1fr;
     max-width: 768px;
     margin: 0 auto 60px auto;
+    background-position: bottom right -63px;
   }
   @include device(desktop) {
     max-width: 1110px;
     grid-template-rows: auto 1fr;
     gap: 127px 0;
+    margin: 0 auto 104px auto;
+    background-position: bottom 70px right 380px;
   }
 }
 
@@ -107,6 +120,7 @@ body {
   grid-column: 1;
   grid-row: 1 / -1;
   margin: 0 auto 40px auto;
+  max-width: 174px;
   @include device(tablet) {
     grid-column: 2 / -1;
     z-index: -1;
