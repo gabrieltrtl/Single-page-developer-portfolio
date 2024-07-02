@@ -57,8 +57,10 @@ body {
     max-width: 768px;
     margin: 0 auto 60px auto;
   }
-  @include device(tablet) {
+  @include device(desktop) {
     max-width: 1110px;
+    grid-template-rows: auto 1fr;
+    gap: 127px 0;
   }
 }
 
@@ -80,7 +82,8 @@ body {
     width: 100%;
   }
   @include device(desktop) {
-    max-width: 1110px;
+    max-width: 1080px;
+    grid-row: 1;
   }
 }
 
@@ -126,6 +129,12 @@ body {
     align-self: end;
     padding-left: 30px;
   }
+  @include device(desktop) {
+    max-width: 720px;
+    padding-left: initial;
+    grid-row: 2;
+    align-self: start;
+  }
 }
 
 .intro__title {
@@ -149,14 +158,19 @@ body {
     margin-bottom: 60px;
     letter-spacing: -2.05px;
   }
+  @include device(desktop) {
+    font-size: 88px;
+    margin-bottom: 43px;
+  }
 }
 
-.intro__linebreak {
+.intro__linebreak::after {
   @include device(tablet) {
-    &::after {
     content: "";
     display: block;
-    }
+  }
+  @include device(desktop) {
+    display: none;
   }
 }
 
@@ -172,12 +186,18 @@ body {
     max-width: 415px;
     margin-bottom: 34px;
   }
+  @include device(desktop) {
+    margin-bottom: 66px;
+  }
 }
 
 .intro__btn {
   position: relative;
   color: $neutral-color-2;
   font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 2.3px;
   &::after {
     content: "";
       display: block;
@@ -187,6 +207,9 @@ body {
       height: 2px;
       margin-top: 10px;
       background-color: #4EE1A0;
+  }
+  &:hover {
+    color: #4EE1A0;
   }
 }
 
