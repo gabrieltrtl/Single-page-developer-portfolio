@@ -251,4 +251,29 @@ body {
 }
 .intro__btn:hover {
   color: #4EE1A0;
+}
+
+.experience {
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+  margin: 0 auto;
+  max-width: 345px;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.experience__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.list__title {
+  font-size: 32px;
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+
+.list__text {
+  color: #D9D9D9;
 }/*# sourceMappingURL=styles.css.map */
