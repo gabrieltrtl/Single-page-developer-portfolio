@@ -231,23 +231,46 @@ body {
   border-top: 1px solid #979797;
   border-bottom: 1px solid #979797;
   margin: 0 auto;
-  max-width: 345px;
+  max-width: 343px;
   text-align: center;
-  padding: 40px 0;
+  padding-top: 40px;
+  @include device(tablet) {
+    max-width: 708px;
+    border-bottom: none;
+    text-align: left;
+  }
+  @include device(desktop) {
+    max-width: 1110px;
+  }
 }
 
 .experience__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 24px 0;
+  @include device(tablet) {
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+  }
+  @include device(desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 58px 0;
+  }
 }
 
 .list__title {
   font-size: 32px;
   line-height: 1.25;
   margin-bottom: 5px;
+  @include device(tablet) {
+    font-size: 48px;
+    margin-bottom: 14px;
+  }
 }
 
 .list__text {
   color: $color2;
+  @include device(tablet) {
+    font-size: 18px;
+  }
 }
