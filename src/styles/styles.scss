@@ -330,16 +330,6 @@ body {
   @include device(tablet) {
   }
 
-  .item__img-wrapper:hover {
-    position: relative;
-    z-index: 1;
-    background-color: blue;
-    border: 5px solid red;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
 
   .item__img {
     margin-bottom: 20px;
@@ -377,6 +367,24 @@ body {
 }
 .projects__item:not(:last-child) {
   margin-bottom: 52px;
+}
+
+.img__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); 
+  transition: background-color 0.3s ease; 
+}
+
+.item__img-wrapper {
+  position: relative;
+}
+
+.item__img-wrapper:hover .img__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .item__img-wrapper:hover ~ .project__links{
