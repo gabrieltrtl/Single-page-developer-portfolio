@@ -367,6 +367,19 @@ body {
   place-items: center;
 }
 
+.projects__item {
+  position: relative;
+}
+.projects__item .item__img-wrapper:hover {
+  position: relative;
+  z-index: 1;
+  background-color: blue;
+  border: 5px solid red;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
 .projects__item .item__img {
   margin-bottom: 20px;
 }
@@ -387,12 +400,27 @@ body {
   color: #4EE1A0;
 }
 
-.view__project {
-  margin-right: 32px;
+.project__links {
+  display: flex;
+  gap: 32px;
+}
+@media (min-width: 700px) {
+  .project__links {
+    gap: 48px;
+    flex-direction: column;
+    position: absolute;
+    top: 138px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .projects__item:not(:last-child) {
   margin-bottom: 52px;
+}
+
+.item__img-wrapper:hover ~ .project__links {
+  border: 1px solid red;
 }
 
 .item__title {
