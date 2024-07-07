@@ -394,6 +394,11 @@ body {
     gap: 72px 24px;
   }
 }
+@media (min-width: 75rem) {
+  .projects__list {
+    gap: 69px 30px;
+  }
+}
 
 .projects__item {
   position: relative;
@@ -489,6 +494,11 @@ body {
   display: flex;
   gap: 18px;
   margin-bottom: 20px;
+}
+@media (min-width: 75rem) {
+  .item__technologies {
+    margin-bottom: initial;
+  }
 }
 .item__technologies li {
   font-size: 18px;

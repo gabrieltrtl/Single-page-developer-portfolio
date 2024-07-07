@@ -341,6 +341,9 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 72px 24px;
   }
+  @include device(desktop) {
+    gap: 69px 30px;
+  }
 }
 
 .projects__item {
@@ -443,6 +446,9 @@ body {
   display: flex;
   gap: 18px;
   margin-bottom: 20px;
+  @include device(desktop) {
+    margin-bottom: initial;
+  }
   li {
     font-size: 18px;
     color: $color2;
