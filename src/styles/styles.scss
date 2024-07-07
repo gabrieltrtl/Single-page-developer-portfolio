@@ -282,7 +282,9 @@ body {
   margin: 80px auto 80px auto;
   padding: 0 16px;
   @include device(tablet) {
+    margin: 0 auto 80px auto;
     max-width: 708px;
+    padding: 0;
   }
   @include device(desktop) {
     max-width: 1110px;
@@ -294,6 +296,12 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  @include device(tablet) {
+    margin-bottom: 60px;
+  }
+  @include device(desktop) {
+    margin-bottom: 80px;
+  }
 }
 
 .projects__title {
@@ -301,6 +309,9 @@ body {
   letter-spacing: 1.15px;
   @include device(tablet) {
     font-size: 72px;
+  }
+  @include device(desktop) {
+    font-size: 88px;
   }
 }
 
