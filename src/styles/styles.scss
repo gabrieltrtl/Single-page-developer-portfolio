@@ -299,6 +299,9 @@ body {
 .projects__title {
   font-size: 40px;
   letter-spacing: 1.15px;
+  @include device(tablet) {
+    font-size: 72px;
+  }
 }
 
 .projects__contact {
@@ -323,16 +326,14 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
+  @include device(tablet) {
+    grid-template-columns: 1fr 1fr;
+    gap: 72px 24px;
+  }
 }
 
 .projects__item {
   position: relative;
-  @include device(tablet) {
-  }
-  .item__img {
-    margin-bottom: 20px;
-  }
-
   .project__link {
     position: relative;
     &::after {
@@ -352,6 +353,7 @@ body {
 }
 
 .item__img-wrapper {
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -365,15 +367,12 @@ body {
   transition: background-color 0.3s ease; 
 }
 
-// .item__img-wrapper:hover .img__overlay {
-//   background-color: rgba(0, 0, 0, 0.5);
-// }
-
 .projects__item:hover .img__overlay,
 .projects__item:hover .project__links:hover ~ .item__img-wrapper .img__overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  @include device(desktop) {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
-
 
 // .item__img-wrapper:hover ~ .project__links{
 //     display: flex;
@@ -386,20 +385,22 @@ body {
 // }
 
 .projects__item:hover > .project__links{
-  display: flex;
-  gap: 60px;
-  flex-direction: column;
-  position: absolute;
-  top: 138px;
-  left: 50%;
-  transform: translateX(-50%);
+  @include device(desktop) {
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+    position: absolute;
+    top: 138px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .project__links {
   text-transform: uppercase;
   display: flex;
   gap: 32px;
-  @include device(tablet) {
+  @include device(desktop) {
     display: none;
     &:hover {
     display: flex;
@@ -415,6 +416,9 @@ body {
 
 .projects__item:not(:last-child) {
   margin-bottom: 52px;
+  @include device(tablet) {
+    margin-bottom: initial;
+  }
 }
 
 .item__title {
@@ -428,5 +432,9 @@ body {
   display: flex;
   gap: 18px;
   margin-bottom: 20px;
+  li {
+    font-size: 18px;
+    color: $color2;
+  }
 }
 

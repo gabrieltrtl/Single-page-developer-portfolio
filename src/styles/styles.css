@@ -342,6 +342,11 @@ body {
   font-size: 40px;
   letter-spacing: 1.15px;
 }
+@media (min-width: 700px) {
+  .projects__title {
+    font-size: 72px;
+  }
+}
 
 .projects__contact {
   position: relative;
@@ -366,12 +371,15 @@ body {
   grid-template-columns: 1fr;
   place-items: center;
 }
+@media (min-width: 700px) {
+  .projects__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 72px 24px;
+  }
+}
 
 .projects__item {
   position: relative;
-}
-.projects__item .item__img {
-  margin-bottom: 20px;
 }
 .projects__item .project__link {
   position: relative;
@@ -391,6 +399,7 @@ body {
 }
 
 .item__img-wrapper {
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -404,19 +413,23 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.projects__item:hover .img__overlay,
-.projects__item:hover .project__links:hover ~ .item__img-wrapper .img__overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+@media (min-width: 75rem) {
+  .projects__item:hover .img__overlay,
+  .projects__item:hover .project__links:hover ~ .item__img-wrapper .img__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
-.projects__item:hover > .project__links {
-  display: flex;
-  gap: 60px;
-  flex-direction: column;
-  position: absolute;
-  top: 138px;
-  left: 50%;
-  transform: translateX(-50%);
+@media (min-width: 75rem) {
+  .projects__item:hover > .project__links {
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+    position: absolute;
+    top: 138px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .project__links {
@@ -424,7 +437,7 @@ body {
   display: flex;
   gap: 32px;
 }
-@media (min-width: 700px) {
+@media (min-width: 75rem) {
   .project__links {
     display: none;
   }
@@ -442,6 +455,11 @@ body {
 .projects__item:not(:last-child) {
   margin-bottom: 52px;
 }
+@media (min-width: 700px) {
+  .projects__item:not(:last-child) {
+    margin-bottom: initial;
+  }
+}
 
 .item__title {
   text-transform: uppercase;
@@ -454,4 +472,8 @@ body {
   display: flex;
   gap: 18px;
   margin-bottom: 20px;
+}
+.item__technologies li {
+  font-size: 18px;
+  color: #D9D9D9;
 }/*# sourceMappingURL=styles.css.map */
