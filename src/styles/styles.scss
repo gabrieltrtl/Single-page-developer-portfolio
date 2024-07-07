@@ -288,6 +288,7 @@ body {
   }
   @include device(desktop) {
     max-width: 1110px;
+    margin: 0 auto 140px auto;
   }
 }
 

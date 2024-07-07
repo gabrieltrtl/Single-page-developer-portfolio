@@ -330,6 +330,7 @@ body {
 @media (min-width: 75rem) {
   .projects {
     max-width: 1110px;
+    margin: 0 auto 140px auto;
   }
 }
 
