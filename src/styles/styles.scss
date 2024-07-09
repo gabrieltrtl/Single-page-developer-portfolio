@@ -549,7 +549,7 @@ body {
 }
 
 .footer__logo {
-  border-top: 1px solid $neutral-color-2;
+  border-top: 0.0625rem solid $neutral-color-2;
   padding-top: 2.4375rem;
   display: flex;
   flex-direction: column;
@@ -569,8 +569,8 @@ body {
 }
 
 svg {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   border: 1px solid red;
   fill: $neutral-color-2;
   &:hover {
