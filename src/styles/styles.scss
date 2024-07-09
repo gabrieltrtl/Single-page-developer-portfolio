@@ -563,14 +563,20 @@ body {
 
 .footer__icons {
   display: flex;
-  gap: 1.6rem;
+  gap: 14px;
   align-items: center;
   justify-content: center;
 }
 
+.footer__icons a {
+  width: 70px;
+  height: 70px;
+  display: block;
+  padding: 10px;
+}
+
 svg {
-  width: 100px;
-  height: 100px;
+  width: 100%;
   border: 1px solid red;
   fill: $neutral-color-2;
   &:hover {
