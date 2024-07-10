@@ -1,3 +1,15 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @font-face {
   font-family: "Space Grotesk";
   src: url(../../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
@@ -40,16 +52,16 @@ body {
   color: #FFFFFF;
   background-image: url(../../assets/images/pattern-rings.svg);
   background-repeat: no-repeat;
-  background-position: top 7.75rem left -21.375rem;
+  background-position: top 124px left -342px;
 }
 @media (min-width: 700px) {
   body {
-    background-position: top 5.375rem left -16.5625rem;
+    background-position: top 86px left -265px;
   }
 }
 @media (min-width: 75rem) {
   body {
-    background-position: top 7.0625rem left -6.25rem;
+    background-position: top 113px left -100px;
   }
 }
 
@@ -590,6 +602,11 @@ body {
 .footer__form {
   width: 100%;
 }
+.footer__form .input__wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 32px;
+}
 .footer__form input {
   padding: 0 0 1.0625rem 1.5rem;
 }
@@ -599,12 +616,21 @@ body {
 .footer__form input, .footer__form textarea {
   display: block;
   width: inherit;
-  margin-bottom: 2rem;
   color: #FFFFFF;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #FFFFFF;
   outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px rgba(35, 35, 35, 0.1607843137);
 }
 
 .footer__form input::placeholder,
@@ -672,4 +698,29 @@ body {
 
 path:hover {
   fill: #4EE1A0;
+}
+
+.error__msg {
+  position: absolute;
+  right: 0;
+  color: #FF6F5B;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 5px;
+  display: none;
+}
+
+.error__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  color: #FF6F5B;
+  border: 1px solid #FF6F5B;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
