@@ -1,6 +1,3 @@
-const nameInput = document.querySelector('#name'); 
-const emailInput = document.querySelector('#email');
-const msgInput = document.querySelector('#message');
 const form = document.querySelector('.footer__form');
 const formInputs = document.querySelectorAll('.footer__form input, .footer__form textarea');
 
